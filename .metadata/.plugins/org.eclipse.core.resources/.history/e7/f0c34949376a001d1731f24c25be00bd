@@ -1,0 +1,23 @@
+package efp.ret.consulta;
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ConsultaController {
+	
+	
+	@RequestMapping(value="/consulta",method = RequestMethod.POST)
+	public Response obtieneRespuesta(@RequestBody Request consulta) {
+		Response respuesta = new Response();
+		
+		System.out.println("Recibo: "+consulta.getCurp());
+		
+		
+		return respuesta;
+	}
+
+
+}

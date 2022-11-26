@@ -1,0 +1,34 @@
+package efp.ret.consulta;
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@RestController
+public class ConsultaController {
+	
+	@PostMapping("/consulta")	
+	@ResponseStatus(HttpStatus.CREATED)
+	
+	public Response respuesta(@RequestBody Request solicitud) {
+		
+		return this.respuesta(solicitud);
+		
+	}
+	
+	/*
+	
+	@RequestBody
+	
+	
+	
+    @ResponseBody
+    public Response respuesta() {
+		
+	}
+	*/
+
+}

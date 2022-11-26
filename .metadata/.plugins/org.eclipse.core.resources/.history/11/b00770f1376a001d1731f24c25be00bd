@@ -1,0 +1,25 @@
+package efp.ret.consulta;
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ConsultaController {
+	
+	
+	@RequestMapping(value="/consulta",method = RequestMethod.POST)
+	public Response obtieneRespuesta(@RequestBody Request consulta) {
+		Response respuesta = new Response();
+		
+		respuesta.setCurp(consulta.getCurp());
+		
+		respuesta.setDiagnostico("01");
+		respuesta.setDescDiagnostico("ACEPTADO");
+		respuesta.setNti("27154896521");
+		respuesta.setRegimen("RO");
+		
+		return respuesta;
+	}
+}
